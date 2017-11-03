@@ -1,8 +1,9 @@
 {
   "name": "we-ui",
-  "version": "0.1.20171103",
+  "version": "0.1.4",
   "description": "test",
   "author": "lgzhang <zhanglg@tfedu.net>",
+  "main": "src/index.js",
   "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -61,10 +62,6 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
-  },
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
   },
   "repository": {
     "type": "git",
