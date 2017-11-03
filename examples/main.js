@@ -14,6 +14,9 @@ import Vuex from 'vuex'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// 引入 we-ui
+import WeUi from '@/index.js'
+
 
 // 注入指令
 // import './components/directive/directive'
@@ -34,6 +37,7 @@ import Main from './pages/Main.vue'
 Vue.use(VueRouter)
 Vue.use(Vuex)
 Vue.use(Element)
+Vue.use(WeUi)
 
 let router = new VueRouter({
 //	mode: 'history',

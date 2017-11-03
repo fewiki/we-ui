@@ -1,23 +1,21 @@
-//TODO 这块后面通过loader解决吧
-import WeDialog from './dialog/index'
-import WeEditor from './editor/editor/editor.vue'
-import WeEditorSimple from './editor/simple/simple.vue'
-import WeEditorComment from './editor/comment/comment.vue'
+import WeEditor from './packages/editor/editor/editor.vue'
+// import WeEditorSimple from './packages/editor/simple/simple.vue'
+// import WeEditorComment from './packages/editor/comment/comment.vue'
+// import WePage from './packages/page/page.vue'
 
-import WePage from './page/page.vue'
+
 import './directive/directive'
 
 const components = [
-  WePage,
   WeEditor,
-  WeEditorSimple,
-  WeEditorComment,
+  // WeEditorSimple,
+  // WeEditorComment,
 ]
 
 const WeUi = {
   install(Vue) {
-    Vue.use(WeDialog);
     components.forEach(component => {
+      console.log(component)
       Vue.component(component.name, component);
     })
   }

@@ -3,7 +3,7 @@
   "version": "0.1.20171103",
   "description": "test",
   "author": "lgzhang <zhanglg@tfedu.net>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
@@ -61,5 +61,21 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fewiki/we-ui.git"
+  },
+  "keywords": [
+    "we-ui"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fewiki/we-ui/issues"
+  },
+  "homepage": "https://github.com/fewiki/we-ui#readme"
 }

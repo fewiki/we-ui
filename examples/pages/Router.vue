@@ -1,7 +1,7 @@
 <template>
 	<div class="loading">
 		<!--加载-->
-    router page
+   		 router page
 		<div class="loading"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
 	</div>
 
