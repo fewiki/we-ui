@@ -1,7 +1,7 @@
 import Emot from './util/Emot.js' // 表情数据
 import UploadImgModal from './modal/upload-img-modal.vue' // 上传图片
 import RecordModal from './modal/record-modal.vue' // 录音弹出框
-import EditorFile from '../../util/EditorFile'
+import EditorFile from '../../../util/EditorFile'
 
 
 import { mapGetters, mapActions,mapState } from 'vuex'

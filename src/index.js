@@ -1,23 +1,15 @@
-// import WeEditor from './packages/editor/editor/editor.vue'
-// import WeEditorSimple from './packages/editor/simple/simple.vue'
-// import WeEditorComment from './packages/editor/comment/comment.vue'
-// import WePage from './packages/page/page.vue'
+import * as Coms from './module'
 
+import './directive/directive'
+// import './filter/filter'
 
-// import './directive/directive'
-
-const components = [
-  // WeEditor,
-  // WeEditorSimple,
-  // WeEditorComment,
-]
-
+import './directive/file-html'
 const WeUi = {
-  // install(Vue) {
-  //   components.forEach(component => {
-  //     Vue.component(component.name, component);
-  //   })
-  // }
+  install(Vue) {
+    for (let key in Coms) {
+      Vue.component(key, Coms[key]);
+    }
+  }
 }
 
 export default WeUi

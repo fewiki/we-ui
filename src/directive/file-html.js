@@ -1,6 +1,7 @@
 //  ajax html
 import Vue from 'vue'
 import EditorFile from '../util/EditorFile'
+console.log('inin')
 Vue.directive('file-html', {
   bind: function(el,value,node) {
     if(!value.value) {

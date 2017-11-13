@@ -53,7 +53,7 @@
 </style>
 
 <script>
-	import EditorFile from '../../../util/EditorFile'
+	import EditorFile from '../../../../util/EditorFile'
 	import CommentAPi from '@/service/api/commentApi.js'
 	export default {
 		props: ['modalCtrl', 'sourceId'],
