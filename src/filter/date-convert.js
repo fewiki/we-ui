@@ -3,8 +3,6 @@ import Vue from 'vue'
 
 // 时间转换
 Vue.filter('showDate', function(value) {
-
-  alert("ass")
 	//时间格式化显示
 	var formatTime = function(time, format) {
 		//	console.log(time)
