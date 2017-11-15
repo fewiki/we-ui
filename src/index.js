@@ -3,7 +3,8 @@ import * as Coms from './module'
 import './directive/directive'
 import './filter/filter'
 
-import './directive/file-html'
+import './util/Vconsole'
+
 const WeUi = {
   install(Vue) {
     for (let key in Coms) {

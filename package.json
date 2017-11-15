@@ -1,6 +1,6 @@
 {
   "name": "we-ui",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "test",
   "author": "lgzhang <zhanglg@tfedu.net>",
   "main": "src/index.js",
