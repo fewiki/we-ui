@@ -44,3 +44,12 @@ Vue.filter('cutOutSubjectName', function(str) {
         return str
     }
 })
+
+// 印章id转name
+Vue.filter('sealIdTOName', function(str) {
+  if(!!str) {
+    return str.substr(0, 1)
+  }else{
+    return str
+  }
+})

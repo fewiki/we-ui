@@ -5,3 +5,5 @@ import './type-convert'
 import './date-convert'
 // 文字处理
 import './text-filter'
+// idToName
+import './id-to-name'
