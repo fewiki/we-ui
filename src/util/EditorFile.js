@@ -1,18 +1,18 @@
 /**
  * 保持代码整洁优雅，享受编程
- * @author lgzhang08@gmail.com * 
- * 
+ * @author lgzhang08@gmail.com *
+ *
  *  编辑器文件处理
  */
 if(!sessionStorage.uploadPath) {
-	
+
 } else{
 	window.FileServerUrl = sessionStorage.uploadPath.split('push.do')[0] + '/nor/';
 }
 
 
 class EditorFile {
-	// 构造  
+	// 构造
 	constructor() {
 		/**
 		 * 各类文件存取方式
@@ -258,6 +258,8 @@ class EditorFile {
 		content = content.replace(this.regImg, function(str) {
 			// 提取url
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
+			  // http不处理
+			 if(/http/.test(str1)) return str1;
 				// 添加全路径
 				var url = window.FileServerUrl + str1.split('"')[1]
 				str1 = 'src="' + url + "?" + window.NormalImgThumb+ '"' + ' onclick="zoomImg(\''+ url +'\')"';
@@ -283,6 +285,8 @@ class EditorFile {
 			var url = "";
 			var name = "";
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
+        // http不处理
+        if(/http/.test(str1)) return str1;
 				// 添加全路径
 				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp3"' + " controls ";
 				return str1;
@@ -298,16 +302,18 @@ class EditorFile {
 			var name = "";
 			// 提取url 更改src
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
+        // http不处理
+        if(/http/.test(str1)) return str1;
 				// 添加全路径, 格式都转换成 mp4
-
 				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp4"'  + " controls preload='meta' ";
 				return str1;
 			})
 			
 			// 提取poster 更改
 			str = str.replace(/poster\=\"[^"]+\"/gim, function(str1) {
+        // http不处理
+        if(/http/.test(str1)) return str1;
 				// 添加全路径, 格式都转换成 mp4
-
 				str1 = 'poster="' + window.FileServerUrl + str1.split('"')[1] + '"';
 				return str1;
 			})
@@ -320,6 +326,8 @@ class EditorFile {
 			var name = "";
 			// 提取url
 			str = str.replace(/href\=\"[^"]+\"/gim, function(str1) {
+        // http不处理
+        if(/http/.test(str1)) return str1;
 				// 添加全路径
 				str1 = 'href="' + window.FileServerUrl + str1.split('"')[1] + '"';
 				return str1;

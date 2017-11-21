@@ -45,8 +45,8 @@ window.addVconsole = function(){
     });
 }
 
-if(/debug=true/.test(location.href)){
-
+if(/debug/.test(location.href)){
+//
 } else{
   window.addVconsole()
 }
