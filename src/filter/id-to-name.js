@@ -6,6 +6,11 @@ Vue.filter('sealIdToName', function(id) {
 })
 
 Vue.filter('userIdToName', function(id) {
+  return userIdToName(id)
+})
+
+
+window.userIdToName = function(id) {
   let item = getNameByid(id, store.get('topicData').discussList[0].releaseList[0].studentList, 'StudentId')[0]
   if(!item){
     item = {StudentTrueName: store.get('userInfo').TrueName}
@@ -18,7 +23,7 @@ Vue.filter('userIdToName', function(id) {
     name = name.substr(-4, 4)
   }
   return name
-})
+}
 
 
 function getNameByid(id, data, type='id') {
