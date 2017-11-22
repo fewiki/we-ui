@@ -57,9 +57,7 @@ Vue.filter('sealIdTOName', function(str) {
 // 印章id转name
 Vue.filter('flowerCount', function(data) {
   let number = 0;
-
   data.forEach((item)=>{
-    console.log('评论鲜花',item.flowerCount)
     number += parseInt(item.flowerCount)
   })
   return number
