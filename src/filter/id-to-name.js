@@ -13,7 +13,7 @@ Vue.filter('userIdToName', function(id) {
 window.userIdToName = function(id) {
   let item = getNameByid(id, store.get('topicData').discussList[0].releaseList[0].studentList, 'StudentId')[0]
   if(!item){
-    item = {StudentTrueName: store.get('userInfo').TrueName}
+    item = {StudentTrueName: store.get('userInfo').trueName}
   }
   // 英文取4个，中文取后三个
   let name = item.StudentTrueName
