@@ -210,3 +210,12 @@ Vue.directive('news-content', {
     // 例如，删除 bind() 添加的事件监听器
   }
 })
+// 获取鲜花数量
+Vue.directive('flower',function(el,binding,vnode){
+    let number=0;
+    binding.value.forEach((item)=>{
+      console.log('评论鲜花',item.flowerCount)
+      number += parseInt(item.flowerCount)
+    })
+    el.innerHTML = `鲜花(${number})`;
+})
