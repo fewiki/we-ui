@@ -4,13 +4,6 @@
  *
  *  编辑器文件处理
  */
-if(!sessionStorage.uploadPath) {
-
-} else{
-	window.FileServerUrl = sessionStorage.uploadPath.split('push.do')[0] + '/nor/';
-}
-
-
 class EditorFile {
 	// 构造
 	constructor() {
@@ -352,10 +345,10 @@ class EditorFile {
 		return tpl
 	}
 	
-	/*
+	/**
 	 * 判断 编辑器内容是否为空
 	 * 有文字 图片 音频  视频 附件等的一种 就不是空
-	 * */
+	 **/
 	isContentEmpty(content) {
 		// 图片 音频  视频 附件等
 		if(this.regImg.test(content) || this.regAudioPath.test(content) || this.regVideoPath.test(content) || this.regAttachPath.test(content)) {
@@ -368,6 +361,48 @@ class EditorFile {
 		
 		return true
 	}
+  
+  /**
+	 * 初始化图片轮播，调用 PC andriod方法
+	 **/
+  initPreviewPic(data){
+    var imgArray = []
+    $("img").each(function(i){
+      // 匹配 http 图片
+      if(/http/.test($(this).attr("src"))) imgArray.push($(this).attr("src"))
+      
+    })
+    
+    // bind click
+    $("img").each(function(i){
+      if(/http/.test($(this).attr("src"))) {
+          $(this).unbind('click').on('click', function(){
+            let index = imgArray.indexOf($(this).attr("src"))
+            console.log(imgArray.toString(), index)
+            window.topic.previewpic(imgArray.toString(), index)
+          })
+      }
+    })
+  
+  }
+  
+    /**
+     * audio video单个控制播放
+     **/
+    audioVideoCtrl (){
+      // 音频 视频
+      let $audioVideo = $('audio,video')
+      $audioVideo.on('play', function() {
+        let activated = this
+        $audioVideo.each(function() {
+          if(this != activated) {
+            this.pause()
+            if(this.currentTime !=0) this.currentTime = this.duration
+          }
+        });
+      });
+  }
+	
 }
-
+window.EditorFile = new EditorFile()
 export default new EditorFile()

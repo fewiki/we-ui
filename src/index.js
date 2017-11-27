@@ -4,6 +4,7 @@ import './directive/directive'
 import './filter/filter'
 
 import './util/Vconsole'
+import './util/EditorFile'
 
 const WeUi = {
   install(Vue) {
