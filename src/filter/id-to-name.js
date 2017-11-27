@@ -1,17 +1,29 @@
 import Vue from 'vue'
 // id to name
-Vue.filter('sealIdToName', function(id) {
-  let item = getNameByid(id, store.get('topicData').seallist)[0]
+/**
+ * 根据ID返回印章名称
+ * @param id 印章id
+ * @param data 被搜索的印章列表
+ */
+Vue.filter('sealIdToName', function(id,data) {
+  let item = getNameByid(id,data)[0]
   return item.name
 })
-
-Vue.filter('userIdToName', function(id) {
-  return userIdToName(id)
+/**
+ * 根据学生id获取真实姓名
+ * @param id 用户Id
+ * @param data 用户列表
+ */
+Vue.filter('userIdToName', function(id,data) {
+  return userIdToName(id,data)
 })
-
-
-window.userIdToName = function(id) {
-  let item = getNameByid(id, store.get('topicData').discussList[0].releaseList[0].studentList, 'StudentId')[0]
+/**
+ * 根据用户id获取用户真实姓名
+ * @param id 用户ID
+ * @param data 用户列表
+ */
+window.userIdToName = function(id,data) {
+  let item = getNameByid(id, data, 'StudentId')[0]
   if(!item){
     item = {StudentTrueName: store.get('userInfo').trueName}
   }
@@ -24,8 +36,12 @@ window.userIdToName = function(id) {
   }
   return name
 }
-
-
+/**
+ * @param id 要搜索的字段
+ * @param 被搜索的列表
+ * @param 被搜索列表的字段
+ * @returns 过滤后的搜索列表
+ */
 function getNameByid(id, data, type='id') {
   return data.filter((item)=>{
     if(item[type] == id)
