@@ -6,15 +6,15 @@
 
 window.addVconsole = function(){
   $(function() {
-    
+
     // 是否加载 vconsole，用于移动端 调试
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "./static/lib/vconsole/vconsole.min.js";
     document.getElementsByTagName("head")[0].appendChild(script);
-    
+
     // 长按左上角，显示vconsole
-      var tpl = '<div id="debugVconsole" style="position: fixed; top:2px; left:2px; width: 50px; height: 50px;"></div>'
+      var tpl = '<div id="debugVconsole" style="position: fixed; top:2px; left:2px; width: 20px; height: 20px;"></div>'
       $('body').append(tpl)
       var timeOutEvent = 0
       setTimeout(function() {
