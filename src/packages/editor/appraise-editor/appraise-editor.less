@@ -1,0 +1,69 @@
+@appraiseHoverColor: #4dd19e;
+.appraise-modal {
+    .el-dialog--small {
+        width: 1000px;
+    }
+    .editor-footer {
+        text-align: center;
+    }
+    .modal-body{
+        padding-bottom: 25px;
+    }
+
+    .stamp-wrapper {
+        display: inline-block;
+        margin-top: 6px;
+        margin-left: 6px;
+        .addstamp-box{
+            cursor: pointer;
+        }
+        .addstamp {
+            img {
+                position: relative;
+                bottom: -3px;
+                right: 5px;
+            }
+        }
+        .activeBgColor {
+            background-color:@appraiseHoverColor;
+            color: #fff;
+        }
+        .stamp-item {
+            display: inline-block;
+            border: 1px solid #d7d7d7;
+            padding: 6px 10px;
+            margin: 1px 6px 12px 0;
+            cursor: pointer;
+//          position:relative;
+            &:hover {
+
+                background-color: @appraiseHoverColor;
+                color: @fff;
+                border: 1px solid @appraiseHoverColor;
+            }
+
+        }
+    }
+    .stamp-shows {
+        background: #f4f4f4;
+        padding: 10px;
+        .addsInpnt{
+            width: 80%;
+            display: inline-block;
+        }
+        .btnOk{
+            margin-left: 20px;
+            background-color: @appraiseHoverColor;
+            color: #fff;
+            border: 1px solid @appraiseHoverColor;
+        }
+    }
+    textarea{
+      width: 98%;
+      height: 92px;
+      border: 0;
+      margin: 12px 0 0 9px;
+      border: 1px solid #e6e6e6;
+      margin-bottom: 30px;
+    }
+}
