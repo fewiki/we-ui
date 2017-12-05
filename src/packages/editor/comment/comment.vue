@@ -13,7 +13,7 @@
 					<img :src="emotItem.path" v-for="(emotItem, index) in emotList" @click="emotSelect(emotItem)">
 				</div>
 			</div>
-			<!--<span class="bar-icon icon-seperate" @click="barSelect(0)"><img src="static/img/topic/text.png" /></span>-->
+			<!--<span class="side-bar-icon icon-seperate" @click="barSelect(0)"><img src="static/img/topic/text.png" /></span>-->
 			<span class="bar-icon icon-seperate" @click="barSelect(1)"><img :src="staticPath+'/img/photo.png'" /></span>
 			<span class="bar-icon" @click="barSelect(2)"><img :src="staticPath+'/img//voice.png'" /></span>
 		</div>
