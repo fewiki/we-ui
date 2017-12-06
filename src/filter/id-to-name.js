@@ -30,7 +30,7 @@ window.userIdToName = function(id,data) {
   // 英文取4个，中文取后三个
   let name = item.StudentTrueName
   if(/[\u4e00-\u9fa5]/.test(name)) {
-    name = name.substr(-3, 3)
+    name = name.substr(-2, 2)
   } else{
     name = name.substr(-4, 4)
   }
