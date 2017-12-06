@@ -36,6 +36,25 @@ window.userIdToName = function(id,data) {
   }
   return name
 }
+
+Vue.filter('userIdToAllName', function(id,data) {
+  return userIdToAllName(id,data)
+})
+window.userIdToAllName = function(id,data) {
+  let item = getNameByid(id, data, 'StudentId')[0]
+  if(!item){
+    item = {StudentTrueName: store.get('userInfo').trueName}
+  }
+  // 英文取4个，中文取后三个
+  let name = item.StudentTrueName
+  // if(/[\u4e00-\u9fa5]/.test(name)) {
+  //   name = name.substr(-2, 2)
+  // } else{
+  //   name = name.substr(-4, 4)
+  // }
+  return name
+}
+
 /**
  * @param id 要搜索的字段
  * @param 被搜索的列表
