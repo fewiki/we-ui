@@ -216,7 +216,7 @@ class EditorFile {
 		});
 
 		//找到所有type="attachment"的img标签，对内容进行修改,暂替换成 img
-		content = content.replace(this.regAttachPath, function(str) {
+		content = content.replace(this.regAttachPath, (str) => {
 			var url = "";
 			//去掉name 及后面的a标签
 			str.replace(this.regAttachEdit, function(str3) {
@@ -279,7 +279,7 @@ class EditorFile {
 			var name = "";
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
         // http不处理
-        if(/http/.test(str1)) return str1;
+        // if(/http/.test(str1)) return str1;
 				// 添加全路径
 				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp3"' + " controls ";
 				return str1;
@@ -296,7 +296,7 @@ class EditorFile {
 			// 提取url 更改src
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
         // http不处理
-        if(/http/.test(str1)) return str1;
+        // if(/http/.test(str1)) return str1;
 				// 添加全路径, 格式都转换成 mp4
 				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp4"'  + " controls preload='meta' ";
 				return str1;
@@ -305,7 +305,7 @@ class EditorFile {
 			// 提取poster 更改
 			str = str.replace(/poster\=\"[^"]+\"/gim, function(str1) {
         // http不处理
-        if(/http/.test(str1)) return str1;
+        // if(/http/.test(str1)) return str1;
 				// 添加全路径, 格式都转换成 mp4
 				str1 = 'poster="' + window.FileServerUrl + str1.split('"')[1] + '"';
 				return str1;
@@ -320,7 +320,7 @@ class EditorFile {
 			// 提取url
 			str = str.replace(/href\=\"[^"]+\"/gim, function(str1) {
         // http不处理
-        if(/http/.test(str1)) return str1;
+        // if(/http/.test(str1)) return str1;
 				// 添加全路径
 				str1 = 'href="' + window.FileServerUrl + str1.split('"')[1] + '"';
 				return str1;
