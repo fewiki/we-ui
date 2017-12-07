@@ -54,7 +54,6 @@
 
 <script>
 	import EditorFile from '../../../../util/EditorFile'
-	import CommentAPi from '@/service/api/commentApi.js'
 	export default {
 		props: ['modalCtrl', 'sourceId'],
 		data() {
@@ -116,23 +115,6 @@
 
             //TODO 庄君祥：处理请求
             this.$emit('input',$editor.html());
-
-            let param = {
-              sourceId: this.sourceId,
-              content: imgHtml,
-              sourceType: sourceType
-            }
-            let result = await CommentAPi.addComment(param)
-            let resultJson = await result.json()
-            if (resultJson.code == '200') {
-              // 清空数据
-              this.imgArray = []
-              this.$refs.uploadCommentImg.clearFiles()
-              // 将回复索引传回
-//              this.$store.dispatch('topicDetails/addCommentCtrl', {id: resultJson.data, replyIndex: this.replyIndex})
-            } else {
-              console.log('加载失败');
-            }
             this.closeModal()
           }else {
             this.$notify(notifyMessage('warning', '请选择图片！'))
