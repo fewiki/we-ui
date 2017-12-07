@@ -9,3 +9,5 @@ webconfig/webconfig.js
 static/editor
 .project
 .idea/*
+yarn-error.log
+npm-error.log
