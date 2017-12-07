@@ -2,8 +2,9 @@
 通用组件库
 
 
-## src代码目录 说明
-- |——src
+## 代码目录 说明
+- |——examples 示例代码
+- |——src 组件代码目录
 	- |——index.js  入口文件
 
 
@@ -19,6 +20,9 @@
 
 // 运行项目，运行在 localhost:8888（端口号可在config/index.js中更改）
 3. npm run dev
+
+## 开发规范
+([中文](https://github.com/fewiki/we-ui/.github/CONTRIBUTING.zh-CN.md)
 
 
 =========================================================================
