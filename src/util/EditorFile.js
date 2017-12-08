@@ -254,7 +254,6 @@ class EditorFile {
 			  // http不处理
 			 if(/http/.test(str1)) return str1;
 				// 添加全路径
-				var url = window.FileServerUrl + str1.split('"')[1]
 				str1 = 'src="' + url + "?" + window.NormalImgThumb+ '"' + ' onclick="zoomImg(\''+ url +'\')"';
 				return str1;
 			})
@@ -281,7 +280,8 @@ class EditorFile {
         // http不处理
         // if(/http/.test(str1)) return str1;
 				// 添加全路径
-				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp3"' + " controls ";
+        var path = str1.split('"')[1].split('.')
+				str1 = 'src="' + window.FileServerUrl + path[path.length-2] + '.mp3"' + " controls ";
 				return str1;
 			})
 			return str;
@@ -298,7 +298,8 @@ class EditorFile {
         // http不处理
         // if(/http/.test(str1)) return str1;
 				// 添加全路径, 格式都转换成 mp4
-				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp4"'  + " controls preload='meta' ";
+        var path = str1.split('"')[1].split('.')
+				str1 = 'src="' + window.FileServerUrl + path[path.length-2] + '.mp4"'  + " controls preload='meta' ";
 				return str1;
 			})
 			
@@ -320,7 +321,7 @@ class EditorFile {
 			// 提取url
 			str = str.replace(/href\=\"[^"]+\"/gim, function(str1) {
         // http不处理
-        // if(/http/.test(str1)) return str1;
+        if(/http/.test(str1)) return str1;
 				// 添加全路径
 				str1 = 'href="' + window.FileServerUrl + str1.split('"')[1] + '"';
 				return str1;
