@@ -7,7 +7,7 @@ Hi! 首先感谢你使用 We UI。
 
 - 在提交 issue 之前，请搜索相关内容是否已被提出。
 
-## Pull Request 规范
+## merge Request 规范
 
 - master为发行分支，受保护，不可直接提交代码
 - develop分支为研发主分支，受保护，不可直接提交代码
