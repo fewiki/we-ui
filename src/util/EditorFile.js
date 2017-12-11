@@ -313,7 +313,9 @@ class EditorFile {
         // http不处理
         if(/http/.test(str1)) return str1;
 				// 添加全路径, 格式都转换成 mp4
-				str1 = 'poster="' + window.FileServerUrl + str1.split('"')[1] + '"';
+				// str1 = 'poster="' + window.FileServerUrl + str1.split('"')[1] + '"';
+        // 暂用默认图片
+        str1 = 'poster="static/img/topic-discuss.png"';
 				return str1;
 			})
 			return str;
