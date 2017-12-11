@@ -18,7 +18,7 @@ window.addVconsole = function(){
       $('body').append(tpl)
       var timeOutEvent = 0
       setTimeout(function() {
-        // $('#__vconsole').hide()
+        $('#__vconsole').hide()
       }, 1000);
       $("#debugVconsole").on({
         touchstart: function(e) {

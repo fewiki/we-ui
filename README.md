@@ -3,9 +3,15 @@
 
 
 ## 代码目录 说明
+- |——docs 说明文档
 - |——examples 示例代码
 - |——src 组件代码目录
 	- |——index.js  入口文件
+	- |——module.js 组件引入文件 
+	- |——directive 通用指令文件夹
+	- |——filter    通用过滤器文件夹
+	- |——packages  组件文件夹
+	- |——util      通用工具类文件夹
 
 
 ## 开发规范
@@ -22,7 +28,7 @@
 //配置
 2. 需复制config/webconfig_example.js为webconfig.js,并修改对应的内容
 
-// 运行项目，运行在 localhost:8888（端口号可在config/index.js中更改）
+// 运行项目，运行在 localhost:9999（端口号可在config/index.js中更改）
 3. npm run dev
 
 

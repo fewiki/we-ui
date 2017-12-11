@@ -2,6 +2,15 @@
 import Vue from 'vue'
 import EditorFile from '../util/EditorFile'
 console.log('inin')
+// Vue.directive('file-html',
+//   function(el,value) {
+//     if(!value.value) {
+//       el.innerHTML = ''
+//     } else {
+//       el.innerHTML = EditorFile.addServerToPath(value.value)
+//     }
+// })
+
 Vue.directive('file-html', {
   bind: function(el,value,node) {
     if(!value.value) {
@@ -15,7 +24,9 @@ Vue.directive('file-html', {
     if(!value.value) {
       el.innerHTML = ''
     } else {
-      el.innerHTML = EditorFile.addServerToPath(value.value)
+      // TODO: zhanglg, update会再次执行，还没找到什么 原因
+      // console.log(value.value)
+      // el.innerHTML = EditorFile.addServerToPath(value.value)
     }
   },
   unbind: function() {
