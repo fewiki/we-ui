@@ -300,11 +300,13 @@ class EditorFile {
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
         // http 的加 属性
         if(/http/.test(str1)) {
-          str1 = str1 + " controls preload='meta' ";
+          str1 = str1 + ' controls preload="none" ';
+          // 没有poster属性需要增加
+          if(/poster/.test(str) == false) str1 = str1 + 'poster=" " '
           return str1;
         }
 				// 添加全路径, 格式都转换成 mp4
-				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp4"'  + " controls preload='meta' ";
+				str1 = 'src="' + window.FileServerUrl + str1.split('"')[1].split('.')[0] + '.mp4"'  + ' controls preload="none" ';
 				return str1;
 			})
 			
@@ -399,16 +401,40 @@ class EditorFile {
      **/
     audioVideoCtrl (){
       // 音频 视频
-      let $audioVideo = $('audio,video')
-      $audioVideo.on('play', function() {
-        let activated = this
-        $audioVideo.each(function() {
-          if(this != activated) {
-            this.pause()
-            if(this.currentTime !=0) this.currentTime = this.duration
-          }
-        });
-      });
+      // let $audioVideo = $('audio,video')
+      // $audioVideo.on('play', function() {
+      //   let activated = this
+      //   $audioVideo.each(function() {
+      //     if(this != activated) {
+      //       this.pause()
+      //       if(this.currentTime !=0) this.currentTime = this.duration
+      //     }
+      //   });
+      // });
+  
+      // 点击poster播放
+      // $audioVideo.each(function() {
+      //   let self = this
+      //   $(this).on('click', function () {
+      //     self.play()
+      //   })
+      // });
+      
+      // 点击poster播放 同时初始化视频，动态绑定，有点屌
+      $(document).on('click', 'audio,video', function () {
+          $(this).get(0).play()
+          let $audioVideo = $('audio,video')
+          $audioVideo.on('play', function() {
+            let activated = this
+            $audioVideo.each(function() {
+              if(this != activated) {
+                this.pause()
+                // 需要将加时加载完，不然 局域网版 PC端会一直占着ajax请求线程不释放，导致后续资源无法加载。chrome无此问题，ie和360或有这些问题
+                if(this.currentTime !=0) this.currentTime = this.duration
+              }
+            });
+          });
+      })
   }
 	
 }
