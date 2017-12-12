@@ -72,7 +72,7 @@ Hi! 首先感谢你使用或贡献 We UI。
 
 # css(less)
 
-- css class命名用 - 链接， id用 驼峰命名
+- css class命名用 - 连接， id用 驼峰命名
 
 
 ## js
