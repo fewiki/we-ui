@@ -26,7 +26,7 @@
 温馨提示: 如果安装不成功，可以使用npm install -g cnpm --registry=https://registry.npm.taobao.org安装淘宝镜像，替换npm命令为cnpm命令重新安装
 
 //配置
-2. 需复制config/webconfig_example.js为webconfig.js,并修改对应的内容
+2. 需复制webconfig/webconfig_example.js为webconfig.js,并修改对应的内容
 
 // 运行项目，运行在 localhost:9999（端口号可在config/index.js中更改）
 3. npm run dev
