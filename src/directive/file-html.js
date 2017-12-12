@@ -35,6 +35,16 @@ Vue.directive('file-html', {
   }
 })
 
+Vue.directive('refresh-html',
+  function(el,binding) {
+    if (!binding.value) {
+      el.innerHTML = ''
+    } else {
+      el.innerHTML = EditorFile.addServerToPath(binding.value)
+    }
+  }
+)
+
 // 带有表情的描述处理
 Vue.directive('content-html',
   function(el,binding) {
