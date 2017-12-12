@@ -11,7 +11,7 @@ Hi! 首先感谢你使用或贡献 We UI。
 
 - master为发行分支，受保护，不可直接提交代码
 - develop分支为研发主分支，受保护，不可直接提交代码
-- 研发时，需要从develop分支切出分支，然后开发，开发完后，提交合并请求到develop分支
+- 研发时，需要从develop分支切出分支，然后开发，开发完后，提交合并请求到develop分支。  或folk项目后，改完之后发起pull request
 
 
 ## 组件开发流程
@@ -33,18 +33,19 @@ Hi! 首先感谢你使用或贡献 We UI。
 ```
   组件示例存放在examples文件夹中
   这个文件夹是vue-cli的基本结构，可以在pages其中建立相应的文件夹开发，文件名与组件文件名一致
+  启动方式 npm run dev
 ```
 
 ### 4 组件的说明文档完善
 ```
   *快速开始*
-  组件说明文档采用 docsify 编写，以markdown格式存储，要以集成vue模版
+  组件说明文档采用 docsify 编写，以markdown格式存储，可以集成vue模版
   // 安装方式
   npm i docsify-cli -g
   // 启动 （在we-ui目录中）
   docsify serve docs  （启动失败用：docsify serve ./docs）
   
-  更多使用打击看官方说明文档： https://docsify.js.org/#/zh-cn/
+  更多使用说明 看方说明文档： https://docsify.js.org/#/zh-cn/
  
    
   *开发*
@@ -63,18 +64,18 @@ Hi! 首先感谢你使用或贡献 We UI。
 ## 代码规范
 
 总体参照腾讯的吧，咱们也向大公司看齐 http://alloyteam.github.io/CodeGuide/
-（补充以下，不断完善中...）
 
+（补充以下，不断完善中...）
 ### html
 
 - html基本都小写，除了id或变量名等
 
-# css(less)
+### css(less)
 
-- css class命名用 - 链接， id用 驼峰命名
+- css class命名用 - 连接， id用 驼峰命名
 
 
-## js
+### js
 
 - 严格执行js 注释规范，包括单行注释 和 多行注释 ，函数必须用多行注释，注明功能 参数和返回类型
 - js 常量全大写，变量驼峰命名
