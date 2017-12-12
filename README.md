@@ -15,7 +15,7 @@
 
 
 ## 开发规范
-([中文](https://github.com/fewiki/we-ui/blob/master/.github/CONTRIBUTING.zh-CN.md))
+([中文](https://github.com/fewiki/we-ui/blob/develop/.github/CONTRIBUTING.zh-CN.md))
 
 
 ## 研发环境运行
