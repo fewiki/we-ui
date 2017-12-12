@@ -45,7 +45,7 @@ Hi! 首先感谢你使用或贡献 We UI。
   // 启动 （在we-ui目录中）
   docsify serve docs  （启动失败用：docsify serve ./docs）
   
-  更多使用打击看官方说明文档： https://docsify.js.org/#/zh-cn/
+  更多使用说明 看方说明文档： https://docsify.js.org/#/zh-cn/
  
    
   *开发*
@@ -64,8 +64,8 @@ Hi! 首先感谢你使用或贡献 We UI。
 ## 代码规范
 
 总体参照腾讯的吧，咱们也向大公司看齐 http://alloyteam.github.io/CodeGuide/
-（补充以下，不断完善中...）
 
+（补充以下，不断完善中...）
 ### html
 
 - html基本都小写，除了id或变量名等
