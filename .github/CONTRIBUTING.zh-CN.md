@@ -39,7 +39,7 @@ Hi! 首先感谢你使用或贡献 We UI。
 ### 4 组件的说明文档完善
 ```
   *快速开始*
-  组件说明文档采用 docsify 编写，以markdown格式存储，要以集成vue模版
+  组件说明文档采用 docsify 编写，以markdown格式存储，可以集成vue模版
   // 安装方式
   npm i docsify-cli -g
   // 启动 （在we-ui目录中）
