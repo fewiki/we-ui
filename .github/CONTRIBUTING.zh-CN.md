@@ -69,6 +69,7 @@ Hi! 首先感谢你使用或贡献 We UI。
 ### html
 
 - html基本都小写，除了id或变量名等
+(这篇文章关于 标签的分类，有点启发： https://juejin.im/post/5a2f2cb36fb9a0450b665899)
 
 ### css(less)
 
