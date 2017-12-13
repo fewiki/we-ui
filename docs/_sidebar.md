@@ -5,7 +5,7 @@
   - [组件开发流程](wiki/coms-start.md)
 
 - 组件
-  - test](components/test/test.md)
+  - [编辑器](components/editor/editor.md)
   - [2]()
   - [3]()
 

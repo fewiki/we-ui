@@ -26,4 +26,4 @@ Vue.use(WeUi)
 
 
 # 自定义
-详见[github](https://github.com/fewiki/we-ui/blob/master/.github/CONTRIBUTING.zh-CN.md)开发规则
+详见[github](https://github.com/fewiki/we-ui/blob/develop/.github/CONTRIBUTING.zh-CN.md)开发规则

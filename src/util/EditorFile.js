@@ -376,50 +376,23 @@ class EditorFile {
 	 * 初始化图片轮播，调用 PC andriod方法
 	 **/
   initPreviewPic(data){
-    var imgArray = []
-    $("img").each(function(i){
-      // 匹配 http 图片
-      if(/http/.test($(this).attr("src"))) imgArray.push($(this).attr("src"))
-      
-    })
-    
-    // bind click
-    $("img").each(function(i){
-      if(/http/.test($(this).attr("src"))) {
-          $(this).unbind('click').on('click', function(){
-            let index = imgArray.indexOf($(this).attr("src"))
-            console.log(imgArray.toString(), index)
-            window.topic.previewpic(imgArray.toString(), index)
-          })
-      }
-    })
+    let imgStr = 'img[type="uploadImg"]'
+    $(document).on('click', imgStr, function () {
+      var imgArray = []
+      $(imgStr).each(function(i){
+        imgArray.push($(this).attr("src"))
+      })
   
+      let index = imgArray.indexOf($(this).attr("src"))
+      console.log(imgArray.toString(), index)
+      window.topic.previewpic(imgArray.toString(), index)
+    })
   }
   
     /**
      * audio video单个控制播放
      **/
     audioVideoCtrl (){
-      // 音频 视频
-      // let $audioVideo = $('audio,video')
-      // $audioVideo.on('play', function() {
-      //   let activated = this
-      //   $audioVideo.each(function() {
-      //     if(this != activated) {
-      //       this.pause()
-      //       if(this.currentTime !=0) this.currentTime = this.duration
-      //     }
-      //   });
-      // });
-  
-      // 点击poster播放
-      // $audioVideo.each(function() {
-      //   let self = this
-      //   $(this).on('click', function () {
-      //     self.play()
-      //   })
-      // });
-      
       // 点击poster播放 同时初始化视频，动态绑定，有点屌
       $(document).on('click', 'audio,video', function () {
           $(this).get(0).play()

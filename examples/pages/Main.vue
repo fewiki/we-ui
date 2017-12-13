@@ -1,10 +1,13 @@
 <template>
-	<div>
+	<div class="container">
 		<router-view></router-view>
 	</div>
 </template>
 <style lang="less">
-  
+  .container {
+    margin: 0 auto;
+    width: 1000px;
+  }
 </style>
 <script>
   	export default {
@@ -17,13 +20,13 @@
     },
 		watch: {
 
-			
+
 		},
 		methods: {
-			
+
 		},
 		mounted() {
-			
+
 		}
 	}
 </script>

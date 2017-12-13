@@ -59,7 +59,7 @@ app.use(devMiddleware)
 app.use(hotMiddleware)
 
 app.use('/webconfig', express.static('./webconfig'))
-// app.use('/examples', express.static('./examples'))
+app.use('/src', express.static('./src'))
 
 
 // serve pure static assets

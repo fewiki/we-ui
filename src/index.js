@@ -14,4 +14,8 @@ const WeUi = {
   }
 }
 
+// if (typeof Vue !== 'undefined') {
+//   Vue.use(WeUi) // eslint-disable-line
+// }
+
 export default WeUi

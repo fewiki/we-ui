@@ -1,5 +1,5 @@
 <template>
-  <iframe :src="editorUrl" :id="id" frameborder="0" width="100%" height="400"
+  <iframe :src="editorUrl" :id="id" frameborder="0" :width="width" :height="height"
           class="zhlEditor modal-content-right vertical-top create-group-discuss-editor"></iframe>
 </template>
 

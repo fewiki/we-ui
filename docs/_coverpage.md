@@ -9,4 +9,4 @@ logo占位
 
 
 [GitHub](https://github.com/fewiki/we-ui)
-[Get Started](#readme)
+[Get Started](README.md)
