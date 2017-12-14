@@ -14,11 +14,11 @@
 ## Attributes
 |  参数 | 说明  | 类型  | 可选值  | 默认值  |
 | :------------ | :------------ | :------------ | :------------ | :------------ |
-| editorUrl  | 编辑器名字  | string |   editor.html reply-editor  | editor.html  |
-| uploadPath | 上传地址    | string |  ---                        |  ---- |
-| value  | 初始绑定值      | string |  ---                        |  ---- |
+| editorUrl  | 编辑器名字  | string |   editor.html reply-editor | editor.html  |
+| uploadPath | 上传地址    | string |  ---                       |  ---- |
+| value  | 初始绑定值      | string |  ---                       |  ---- |
 | width |  宽度 |  string  |         | 100%                      |
-| width |  高度 |  string  |         | 300                     |
+| height |  高度 |  string  |         | 300                      |
 
 
 
@@ -40,6 +40,8 @@
 ------------
 
 ## 组件示例
+
+### 代码
 <script v-pre type="text/x-template" id="editor">
   <template>
     <div>
@@ -84,4 +86,8 @@
 </script>
 
 <vuep template="#editor"></vuep>
+
+### 示例页面
+
+<iframe src="/#/editor" width="100%" height='900'></iframe>
 

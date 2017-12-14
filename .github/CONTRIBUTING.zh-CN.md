@@ -34,22 +34,24 @@ Hi! 首先感谢你使用或贡献 We UI。
   组件示例存放在examples文件夹中
   这个文件夹是vue-cli的基本结构，可以在pages其中建立相应的文件夹开发，文件名与组件文件名一致
   启动方式 npm run dev
+  启动在 http://localhost:9999
 ```
 
 ### 4 组件的说明文档完善
 ```
   *快速开始*
   组件说明文档采用 docsify 编写，以markdown格式存储，可以集成vue模版
-  // 安装方式
-  npm i docsify-cli -g
-  // 启动 （在we-ui目录中）
-  docsify serve docs  （启动失败用：docsify serve ./docs）
+  // 访问方式  （说明文档暂不支持 自动刷新，请手动刷新一下）
+  http://localhost:9999/docs/index.html
   
   更多使用说明 看方说明文档： https://docsify.js.org/#/zh-cn/
  
    
   *开发*
   将1和3的内容整合到docs文件夹中，在components中建文件，建立相应的组件.md文件，在_sidebar.md中建立好目录引用
+  可采用 vuep 组件引入代码，高亮展示效果比较好，也可以用 代码方式引入
+  示例页面 暂用 iframe将examples的文件引入，如 <iframe src="/#/editor" width="100%" height='900'></iframe>，src的值为相应的组件路由
+  
  
   如果组件的结构或内容有变化，需要重复以上4个步骤
 ```

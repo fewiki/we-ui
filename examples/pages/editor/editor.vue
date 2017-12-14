@@ -22,7 +22,7 @@
         return {
           editorUrl: window.CloudServer + '/editor/editor.html',
           uploadPath: '',
-          content: "<p style='color:red'>赋值啦</p>",
+          content: "<div style='color: red'>Hello World!! </>",
         }
     },
 		watch: {
@@ -31,6 +31,10 @@
 		methods: {
       contentChange(content) {
         this.content = content
+        setTimeout(() => {
+          hljs.initHighlightingOnLoad();
+        }, 1000)
+
       }
 		},
 		mounted() {
