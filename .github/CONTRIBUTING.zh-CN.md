@@ -40,6 +40,7 @@ Hi! 首先感谢你使用或贡献 We UI。
 ### 4 组件的说明文档完善
 ```
   *快速开始*
+  
   组件说明文档采用 docsify 编写，以markdown格式存储，可以集成vue模版
   // 访问方式  （说明文档暂不支持 自动刷新，请手动刷新一下）
   http://localhost:9999/docs/index.html
@@ -49,12 +50,19 @@ Hi! 首先感谢你使用或贡献 We UI。
    
   *开发*
   将1和3的内容整合到docs文件夹中，在components中建文件，建立相应的组件.md文件，在_sidebar.md中建立好目录引用
-  可采用 vuep 组件引入代码，高亮展示效果比较好，也可以用 代码方式引入
-  示例页面 暂用 iframe将examples的文件引入，如 <iframe src="/#/editor" width="100%" height='900'></iframe>，src的值为相应的组件路由
   
- 
+  可采用 vuep 组件引入代码，高亮展示效果比较好，也可以用 代码方式引入
+  
+  示例页面 暂用 iframe将examples的文件引入，
+  可参看editor组件， 如 <iframe src="/#/editor" width="100%" height='900'></iframe>，src的值为相应的组件路由
+  
   如果组件的结构或内容有变化，需要重复以上4个步骤
+  
 ```
+
+
+### 5 组件测试
+- 待完善
 
 ## 文件规范
 
