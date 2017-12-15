@@ -1,5 +1,4 @@
 require('./check-versions')()
-
 var config = require('../config')
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
@@ -59,8 +58,7 @@ app.use(devMiddleware)
 app.use(hotMiddleware)
 
 app.use('/webconfig', express.static('./webconfig'))
-app.use('/src', express.static('./src'))
-
+app.use('/docs', express.static('./docs'))
 
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
