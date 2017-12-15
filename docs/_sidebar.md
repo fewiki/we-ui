@@ -6,7 +6,7 @@
 - 组件
   - [编辑器](components/editor/editor.md)
   - [时间倒计时](components/countdown/countdown.md)
-  - [3]()
+  - [评论编辑器](components/comment-editor/comment-editor.md)
 
 - 更新日志
 
