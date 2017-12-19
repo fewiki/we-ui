@@ -255,7 +255,8 @@ class EditorFile {
 			 if(/http/.test(str1)) return str1;
 				// 添加全路径
 				var url = window.FileServerUrl + str1.split('"')[1]
-				str1 = 'src="' + url + "?" + window.NormalImgThumb+ '"' + ' onclick="zoomImg(\''+ url +'\')"';
+				// str1 = 'src="' + url + "?" + window.NormalImgThumb+ '"' + ' onclick="zoomImg(\''+ url +'\')"';
+        str1 = 'src="' + url + "?" + window.NormalImgThumb+ '"';
 				return str1;
 			})
 			return str;

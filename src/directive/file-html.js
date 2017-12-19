@@ -70,12 +70,12 @@ let doImgHtml = function(value) {
     let url = window.FileServerUrl + imgArray[i]
     if (i > 0 && imgArray.length === 2 || i > 1) {
       tpl += `<div class="img-list-item">
-			<img src='${ url + "?" + window.SmallImgThumb}' onclick="zoomImg('${url}')" type="uploadImg">
+			<img src='${ url + "?" + window.SmallImgThumb}' type="uploadImg">
 			<span class="img-num ${'img-num-' + i}"><i class="fa fa-image"></i> 共${imgArray.length}张</span>
 		  </div>`
     }else{
       tpl += `<div class="img-list-item">
-			<img src='${ url + "?" + window.SmallImgThumb}' onclick="zoomImg('${url}')" type="uploadImg">
+			<img src='${ url + "?" + window.SmallImgThumb}'  type="uploadImg">
 		  </div>`
     }
 
@@ -103,7 +103,7 @@ let doAllImgHtml = function(value) {
     let url = window.FileServerUrl + imgArray[i]
     tpl += `<div class="img-list-item">
 			<img src='${window.FileServerUrl + imgArray[i]  + "?" + window.SmallImgThumb}'
-			 onclick="zoomImg('${url}')" type="uploadImg">
+			  type="uploadImg">
 		</div>`
     i++
   }
