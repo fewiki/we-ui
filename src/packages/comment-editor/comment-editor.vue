@@ -10,8 +10,13 @@
         <div class="publish-comment" @click="addComment">发表</div>
       </div>
     </div>
-    <div class="content-type">
-      
+    <div class="editor-bar">
+      <div class="emot-ctrl">
+        <img src="./img/smile.png" />
+        <div class="emot-list">
+          <img :src="emotItem.path" v-for="(emotItem, index) in emotList" @click="emotSelect(emotItem)">
+        </div>
+      </div>
     </div>
 	</div>
 </template>
@@ -113,9 +118,6 @@
           color: red;
         }
       }
-      .text-num {
-
-      }
       .publish-comment {
         position: absolute;
         bottom: -46px;
@@ -174,7 +176,7 @@
       padding-left: 15px;
       .comment-btn {
         cursor: pointer;
-        font-size: 1.4rem;
+        font-size: 14px;
         color: #989898;
         display: block;
       }

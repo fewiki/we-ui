@@ -1,4 +1,4 @@
-// import Emot from '@/service/common/util/Emot.js' // 表情数据
+import Emot from './Emot.js' // 表情数据
 
 export default {
 	props: {
@@ -12,7 +12,8 @@ export default {
 			commentCount:0,
       editor:'',
       content:'',
-      comment:'',
+			comment:'',
+			emotList: Emot.emotList, // 表情数组,
 		}
 	},
 	components:{
