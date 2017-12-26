@@ -1,14 +1,17 @@
 <template>
 	<div class="comment-editor-container">
-    <!--<div class="comment-tip" v-if="true">-->
-      <!--<span class="comment-btn" @click="showCommentEditor">我也评一句</span>-->
-    <!--</div>-->
+    <div class="comment-tip" v-if="true">
+      <span class="comment-btn" @click="showCommentEditor">我也评一句</span>
+    </div>
     <div class="comment-editor" v-if="true">
       <div class="editor-input">
         <div class="editor-content" contenteditable @input="changeText" id="comment-editor" placeholder="请输入评论内容..."></div>
         <div class="number-statistic text-num">{{wordCount}}/200</div>
-        <!--<div class="publish-comment" @click="addComment">发表</div>-->
+        <div class="publish-comment" @click="addComment">发表</div>
       </div>
+    </div>
+    <div class="content-type">
+      
     </div>
 	</div>
 </template>
