@@ -28,13 +28,13 @@ export default{
   mounted(){
     let $this = this;
     setTimeout(e=>{
-      
+
       let $editor = $('#'+this.id)[0].contentWindow.$('#zhlEditor')[0];
-  
+
       if(this.value!=undefined){
         $editor.innerHTML=EditorFile.setContent(this.value);
       }
-      
+
       $editor.addEventListener("input", function(){
         setTimeout(e=>{
           $this.$emit('input',EditorFile.replaceContent($editor.innerHTML));

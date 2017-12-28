@@ -8,16 +8,16 @@ class Emot {
 	 // 构造  
     constructor() {
 //  	this.emotText = ['微笑','龇牙','疑问','恐惧','崇拜','调皮','顶','晕','送礼','送花','研究','做作业','害羞','憨笑','加油','谢谢','牛','胜利','OK','鲜花','鄙视','得意','汗','囧','哭','困','呵呵','惊讶','乖','恶魔','臭','鬼脸','哼','酷','流汗','马上哭','美丽','怒','潜水','色','傻眼','生气','输了','睡觉','衰','可爱','呜呜','委屈','吐血','抓狂']
-    	this.emotList = []
+		this.emotList = []
+		this.testPath = './img/smile.png'
     	for(let i=1; i<100; i++) {
-    		var id = 'emoji' + i
+    		var id = 'emoji'+i
     		this.emotList.push({
     			id: id,
 //  			name: item,
-    			path: window.EmotPath + id + '.png'
+    			path:'./static/img/emot/'+ id + '.png'
     		})
     	}
-    	
     }  
 	/**
 	 * 正则匹配表情
