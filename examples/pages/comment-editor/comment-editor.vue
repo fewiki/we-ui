@@ -5,9 +5,6 @@
     <div>编辑器绑定值: {{value}}</div>
   </div>
 </template>
-<style lang="less">
-
-</style>
 <script>
   export default {
     data(){
@@ -28,3 +25,7 @@
     }
   }
 </script>
+<style lang="less">
+
+</style>
+
