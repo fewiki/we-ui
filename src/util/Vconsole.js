@@ -46,7 +46,6 @@ window.addVconsole = function(){
 }
 
 if(/debug/.test(location.href)){
-//
 } else{
   window.addVconsole()
 }

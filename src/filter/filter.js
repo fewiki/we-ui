@@ -7,3 +7,5 @@ import './date-convert'
 import './text-filter'
 // idToName
 import './id-to-name'
+// 多媒体处理
+import './addServer'

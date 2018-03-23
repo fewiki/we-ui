@@ -26,7 +26,9 @@ Vue.directive('file-html', {
     } else {
       // TODO: zhanglg, update会再次执行，还没找到什么 原因
       // console.log(value.value)
-      // el.innerHTML = EditorFile.addServerToPath(value.value)
+      // if(el.innerHTML == value.value) return false
+      // EditorFile.addServerToPath(
+      // el.innerHTML = value.value
     }
   },
   unbind: function() {
