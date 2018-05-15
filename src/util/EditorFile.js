@@ -275,13 +275,15 @@ class EditorFile {
 
 		//找到所有type="muisc"的img标签，对内容进行修改
 		content = content.replace(this.regAudioPath, function(str) {
+		 
 			//根据type类型，判断内容
 			var url = "";
 			var name = "";
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
         // http 的加 属性
         if(/http/.test(str1)) {
-          str1 = str1 + " controls "
+          str1 = str1.replace(/(wav|wma|m4a|mp2|amr)/i, 'mp3')
+          str1 = str1 + " controls ";
           return str1;
         }
 				// 添加全路径
@@ -301,6 +303,7 @@ class EditorFile {
 			str = str.replace(/src[=\"\'\s]+([^\"\']+)[\"\']/gim, function(str1) {
         // http 的加 属性
         if(/http/.test(str1)) {
+          str1 = str1.replace(/(wmv|avi|flv|mov|m4v)/i, 'mp4')
           str1 = str1 + ' controls preload="none" ';
           // 没有poster属性需要增加
           if(/poster/.test(str) == false) str1 = str1 + 'poster=" " '

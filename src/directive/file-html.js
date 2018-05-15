@@ -102,9 +102,17 @@ let doAllImgHtml = function(value) {
   })
   let tpl = ''
   for(let i=0; i<imgArray.length; ) { // 拼接 字符串
-    let url = window.FileServerUrl + imgArray[i]
+    let url = ''
+    // http不处理
+    
+    if(/http/.test(imgArray[i])) {
+      url = imgArray[i]
+    } else {
+      url = window.FileServerUrl + imgArray[i]
+    }
+   
     tpl += `<div class="img-list-item">
-			<img src='${window.FileServerUrl + imgArray[i]  + "?" + window.SmallImgThumb}'
+			<img src='${url  + "?" + window.SmallImgThumb}'
 			  type="uploadImg">
 		</div>`
     i++
